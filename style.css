@@ -1,106 +1,21 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #d63384;
-    color: white;
-    padding: 20px;
-}
-
-section {
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-.categorias {
-    margin: 20px 0;
-}
-
-.categorias button {
-    background-color: #d63384;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.categorias button:hover {
-    background-color: #b52a6a;
-}
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-/* CATEGORÍAS */
-.categorias {
-    margin: 20px 0;
-}
-
-.categorias button {
-    background-color: #d63384;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.categorias button:hover {
-    background-color: #b52a6a;
-}
-
-/* TELENOVELAS */
-.telenovelas {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.telenovela {
-    text-align: center;
-}
-
-.telenovela img {
-    width: 200px;
-    height: 300px;
-    border-radius: 15px;
-    object-fit: cover;
-    transition: 0.3s;
-}
-
-.telenovela img:hover {
-    transform: scale(1.05);
-}
-/* Estilo de Netflix */
+/* 🔹 Diseño General */
 body {
     background-color: #141414;
     color: white;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
-/* Barra de navegación */
+/* 🔹 Encabezado */
+header {
+    background-color: #d63384;
+    color: white;
+    padding: 20px;
+}
+
+/* 🔹 Barra de navegación */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -114,50 +29,40 @@ body {
     color: #d63384;
 }
 
-.categorias a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
+/* 🔹 Categorías */
+.categoria {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
 }
 
-.categorias a:hover {
-    color: #d63384;
+.categoria h2 {
+    font-size: 22px;
+    margin: 10px 0;
+    text-align: left;
 }
 
-/* Slider de telenovelas */
+/* 🔹 Carrusel de telenovelas */
 .slider {
     display: flex;
     overflow-x: auto;
-    gap: 15px;
-    padding: 20px;
+    gap: 10px;
+    padding-bottom: 10px;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
 }
 
 .slider::-webkit-scrollbar {
-    display: none; /* Oculta la barra de desplazamiento en Chrome y Safari */
+    display: none;
 }
 
+/* 🔹 Portadas de telenovelas */
 .telenovela {
     flex: 0 0 auto;
     scroll-snap-align: start;
     transition: transform 0.3s;
-}
-
-.telenovela img {
-    width: 200px;
-    height: 300px;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: 0.3s;
-}
-
-.telenovela:hover {
-    transform: scale(1.1); /* Efecto de zoom */
-}
-/* Estilo de las portadas */
-.telenovela {
     position: relative;
     cursor: pointer;
 }
@@ -170,7 +75,11 @@ body {
     transition: 0.3s;
 }
 
-/* Categorías flotantes */
+.telenovela:hover img {
+    transform: scale(1.05);
+}
+
+/* 🔹 Categorías flotantes */
 .overlay {
     position: absolute;
     bottom: 0;
@@ -187,70 +96,11 @@ body {
     transition: opacity 0.3s;
 }
 
-/* Mostrar categorías al pasar el mouse */
 .telenovela:hover .overlay {
     opacity: 1;
 }
 
-/* Efecto zoom */
-.telenovela:hover img {
-    transform: scale(1.1);
-}
-/* Diseño General */
-body {
-    background-color: #141414;
-    color: white;
-    font-family: Arial, sans-serif;
-}
-
-/* Estilo de cada categoría */
-.categoria {
-    display: flex;
-    flex-direction: column; /* Asegura que el título esté arriba */
-    align-items: flex-start; /* Alinea todo a la izquierda */
-    padding-left: 20px;
-}
-
-.categoria h2 {
-    font-size: 22px;
-    margin: 1 0 10px 0; /* Asegura que haya espacio entre el título y las portadas */
-    text-align: left;
-}
-
-}
-
-/* Carrusel de telenovelas */
-.slider {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-    padding-bottom: 10px;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-}
-
-.slider::-webkit-scrollbar {
-    display: none;
-}
-
-/* Portadas de telenovelas */
-.telenovela {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-    transition: transform 0.3s;
-}
-
-.telenovela img {
-    width: 200px;
-    height: 300px;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: 0.3s;
-}
-
-.telenovela:hover {
-    transform: scale(1.1);
-}
+/* 🔹 Buscador */
 .buscador {
     text-align: center;
     margin-bottom: 20px;
@@ -264,6 +114,8 @@ body {
     border-radius: 20px;
     font-size: 16px;
 }
+
+/* 🔹 Botón "Ver más" */
 .ver-mas {
     text-align: right;
     margin-top: 10px;
@@ -279,7 +131,8 @@ body {
 .ver-mas a:hover {
     text-decoration: underline;
 }
-/* Fondo oscuro del pop-up */
+
+/* 🔹 Pop-up */
 .popup {
     display: none;
     position: fixed;
@@ -292,7 +145,7 @@ body {
     align-items: center;
 }
 
-/* Contenido del pop-up */
+/* 🔹 Contenido del pop-up */
 .popup-content {
     background: black;
     padding: 20px;
@@ -303,29 +156,7 @@ body {
     position: relative;
 }
 
-/* Botón de cerrar */
-.close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-/* Cuadrícula de telenovelas dentro del pop-up */
-.popup-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px;
-    margin-top: 20px;
-}
-
-/* Tamaño de las imágenes en el pop-up */
-.popup-grid img {
-    width: 100%;
-    border-radius: 10px;
-}
-/* Estilo para la "X" de cerrar */
+/* 🔹 Botón de cerrar */
 .close {
     position: absolute;
     top: 10px;
@@ -338,4 +169,27 @@ body {
 
 .close:hover {
     color: red;
+}
+
+/* 🔹 Cuadrícula de telenovelas en el pop-up */
+.popup-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.popup-grid img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* 🔹 Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
