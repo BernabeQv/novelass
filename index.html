@@ -1,0 +1,52 @@
+<div class="buscador">
+    <input type="text" id="search" placeholder="Buscar telenovela..." onkeyup="buscarTelenovela()">
+</div>
+
+<div class="categoria">
+    <h2>Juventud, Divino tesoro</h2>
+  <div class="ver-mas">
+    <a href="#" onclick="abrirPopup('Clásicas', [
+        { nombre: 'Rebelde', imagen: 'https://images.justwatch.com/poster/306143590/s718/floricienta.jpg' },
+        { nombre: 'Marimar', imagen: 'https://upload.wikimedia.org/wikipedia/en/6/68/MarimarLogo.png' },
+        { nombre: 'La Usurpadora', imagen: 'https://upload.wikimedia.org/wikipedia/en/d/dc/LaUsurpadoraLogo.png' }
+    ])">Ver más</a>
+</div>
+
+</div>
+    <div class="slider">
+        <div class="telenovela"><img src="https://m.media-amazon.com/images/M/MV5BOTBjZDljMGQtM2RlNS00NWQzLWExMjEtM2RmMDg1Mzc1MzlkXkEyXkFqcGc@._V1_QL75_UY281_CR11,0,190,281_.jpg/200x300" alt="RebeldeWay"></div>
+        <div class="telenovela"><img src="https://m.media-amazon.com/images/M/MV5BYzE0NTZhODYtOGQ5ZS00YjEzLWI3YmQtZjgxZTliMDYxYjRmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg/200x300" alt="Rebelde"></div>
+        <div class="telenovela"><img src="https://images.justwatch.com/poster/293476128/s718/clase-406.jpg/200x300" alt="Clase406"></div>
+        <div class="telenovela"><img src="https://m.media-amazon.com/images/M/MV5BYTkwMTQ1MTctZjQxMi00MDE3LWEwMDAtZjU2YTk1OTlhM2M5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg/200x300" alt="Casi Angeles"></div>
+    </div>
+</div>
+
+<div class="categoria">
+    <h2>Revive los 80s</h2>
+    <div class="slider">
+        <div class="telenovela"><img src="https://m.media-amazon.com/images/M/MV5BOTAyYmY2YjEtYWQ2ZC00MjdkLTkxMWUtNmMwNjczYzczOTA5XkEyXkFqcGc@._V1_.jpg/200x300" alt="El derecho de nacer"></div>
+        <div class="telenovela"><img src="https://m.media-amazon.com/images/M/MV5BOTIyMDg0ODctZTQ2Yy00ZTI5LWEwYWQtYjVjYzUyYmNlNTdjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg/200x300" alt="Simplemente Maria"></div>
+        <div class="telenovela"><img src="https://m.media-amazon.com/images/M/MV5BOGRkNDVlNzQtM2Q1My00YTZiLWFmY2ItZDNjZjE4NTIwOWQ1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg/200x300" alt="Rosa Salvaje"></div>
+        <div class="telenovela"><img src="https://m.media-amazon.com/images/M/MV5BNGQyMjFlY2EtNmQ3MS00YmI0LTgyYTUtZDU2OWRjNmEyYjI1XkEyXkFqcGc@._V1_UY1200_CR87,0,630,1200_AL_.jpg/200x300" alt="Cuna de Lobos"></div>
+    </div>
+</div>
+
+<div class="categoria">
+    <h2>Internacionales</h2>
+    <div class="slider">
+        <div class="telenovela"><img src="https://via.placeholder.com/200x300" alt="Telenovela Internacional 1"></div>
+        <div class="telenovela"><img src="https://via.placeholder.com/200x300" alt="Telenovela Internacional 2"></div>
+        <div class="telenovela"><img src="https://via.placeholder.com/200x300" alt="Telenovela Internacional 3"></div>
+        <div class="telenovela"><img src="https://via.placeholder.com/200x300" alt="Telenovela Internacional 4"></div>
+    </div>
+</div>
+
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="cerrarPopup()">&times;</span>
+        <h2 id="popup-title">Telenovelas</h2>
+        <div class="popup-grid" id="popup-grid">
+            <!-- Aquí se agregarán las telenovelas dinámicamente -->
+        </div>
+    </div>
+</div>
