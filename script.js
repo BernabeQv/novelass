@@ -22,10 +22,3 @@ function abrirPopup(categoria, telenovelas) {
         img.alt = telenovela.nombre;
         grid.appendChild(img);
     });
-
-    document.getElementById("popup").style.display = "flex";
-}
-
-function cerrarPopup() {
-    document.getElementById("popup").style.display = "none";
-}
