@@ -8,55 +8,105 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
+<header>
+    <h1>PlayBlim</h1>  
+</header>
+
 <div class="buscador">
     <input type="text" id="search" placeholder="Buscar telenovela..." onkeyup="buscarTelenovela()">
 </div>
 
-<div class="categoria">
-    <h2>Juventud, Divino tesoro</h2>
-  <div class="ver-mas">
-    <a href="#" onclick="abrirPopup('Clásicas', [
-        { nombre: 'Rebelde', imagen: 'https://images.justwatch.com/poster/306143590/s718/floricienta.jpg' },
-        { nombre: 'Marimar', imagen: 'https://upload.wikimedia.org/wikipedia/en/6/68/MarimarLogo.png' },
-        { nombre: 'La Usurpadora', imagen: 'https://upload.wikimedia.org/wikipedia/en/d/dc/LaUsurpadoraLogo.png' }
-    ])">Ver más</a>
-</div>
-
-</div>
-    <div class="slider">
-        <div class="telenovela"><img src="https://m.media-amazon.com/images/M/MV5BOTBjZDljMGQtM2RlNS00NWQzLWExMjEtM2RmMDg1Mzc1MzlkXkEyXkFqcGc@._V1_QL75_UY281_CR11,0,190,281_.jpg/200x300" alt="RebeldeWay"></div>
-        <div class="telenovela"><img src="https://m.media-amazon.com/images/M/MV5BYzE0NTZhODYtOGQ5ZS00YjEzLWI3YmQtZjgxZTliMDYxYjRmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg/200x300" alt="Rebelde"></div>
-        <div class="telenovela"><img src="https://images.justwatch.com/poster/293476128/s718/clase-406.jpg/200x300" alt="Clase406"></div>
-        <div class="telenovela"><img src="https://m.media-amazon.com/images/M/MV5BYTkwMTQ1MTctZjQxMi00MDE3LWEwMDAtZjU2YTk1OTlhM2M5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg/200x300" alt="Casi Angeles"></div>
+<div class="categorias">
+    <div class="categoria">
+        <h2>Juventud, Divino Tesoro</h2>
+        <div class="slider">
+            <div class="telenovela">
+                <img src="https://m.media-amazon.com/images/M/MV5BOWFlMzc4MDktZmNjNi00ODM3LTlkNzEtNjJjMWY4ZGFlNmU2XkEyXkFqcGc@._V1_.jpg" 
+                     alt="Quinceañera" 
+                     onclick="mostrarTelenovela('Quinceañera', 'https://m.media-amazon.com/images/M/MV5BOWFlMzc4MDktZmNjNi00ODM3LTlkNzEtNjJjMWY4ZGFlNmU2XkEyXkFqcGc@._V1_.jpg', '1987', 'Maricruz una chica de una familia humilde y Beatriz una joven de una familia adinerada son grandes amigas, y ambas están a punto de convertirse en quinceañeras dejando atrás la niñez')">
+            </div>
+            <div class="telenovela">
+                <img src="https://m.media-amazon.com/images/M/MV5BYzE0NTZhODYtOGQ5ZS00YjEzLWI3YmQtZjgxZTliMDYxYjRmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+                     alt="Rebelde" 
+                     onclick="mostrarTelenovela('Rebelde', 'https://m.media-amazon.com/images/M/MV5BYzE0NTZhODYtOGQ5ZS00YjEzLWI3YmQtZjgxZTliMDYxYjRmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', '2004', 'Sinopsis de Rebelde')">
+            </div>
+            <div class="telenovela">
+                <img src="https://i.ibb.co/Cs80HgM7/cls406.png" 
+                     alt="Clase 406" 
+                     onclick="mostrarTelenovela('Clase 406', 'https://i.ibb.co/Cs80HgM7/cls406.png', '2002', 'Sinopsis de Clase 406')">
+            </div>
+            <div class="telenovela">
+                <img src="https://m.media-amazon.com/images/M/MV5BMGU0ODI1ZTMtMWQ5Zi00YzdmLTk3NDktMjg2MDViOTQwMmFjXkEyXkFqcGc@._V1_.jpg" 
+                     alt="Verano del 98" 
+                     onclick="mostrarTelenovela('Verano del 98', 'https://i.ibb.co/NntqB2Gn/Ev-CIga-VVc-AI18gg.jpg', '1998', 'Sinopsis de Verano del 98')">
+            </div>
+            <div class="telenovela">
+                <img src="https://images.justwatch.com/poster/306143590/s718/floricienta.jpg" 
+                     alt="Floricienta" 
+                     onclick="mostrarTelenovela('Floricienta', 'https://images.justwatch.com/poster/306143590/s718/floricienta.jpg', '2004', 'Sinopsis de Floricienta')">
+            </div>
+            <div class="telenovela">
+                <img src="https://m.media-amazon.com/images/M/MV5BYTkwMTQ1MTctZjQxMi00MDE3LWEwMDAtZjU2YTk1OTlhM2M5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+                     alt="Casi Ángeles" 
+                     onclick="mostrarTelenovela('Casi Ángeles', 'https://m.media-amazon.com/images/M/MV5BYTkwMTQ1MTctZjQxMi00MDE3LWEwMDAtZjU2YTk1OTlhM2M5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', '2007', 'Sinopsis de Casi Ángeles')">
+            </div>
+            <div class="telenovela">
+                <img src="https://i.ibb.co/xtnmCN1R/AGDCDRO.png" 
+                     alt="Agujetas de color de rosa" 
+                     onclick="mostrarTelenovela('Amor Mío', 'https://i.ibb.co/xtnmCN1R/AGDCDRO.png', '1994', 'Sinopsis de Amor Mío')">
+            </div>
+            <div class="telenovela">
+                <img src="https://i.ibb.co/Xf6Pnd1x/ZDNTTGALHJAY3-A4-YTVXG5-PAMHQ.jpg" 
+                     alt="Rebelde way" 
+                     onclick="mostrarTelenovela('Rebelde way', 'https://i.ibb.co/Xf6Pnd1x/ZDNTTGALHJAY3-A4-YTVXG5-PAMHQ.jpg', '2002', 'En un ambiente elitista y conservador un grupo de jóvenes debe transitar su adolescencia estimulados a reprimir sus impulsos naturales.')">
+            </div>
+        </div>
     </div>
 </div>
-
-<div class="categoria">
-    <h2>Revive los 80s</h2>
-    <div class="slider">
-        <div class="telenovela"><img src="https://m.media-amazon.com/images/M/MV5BOTAyYmY2YjEtYWQ2ZC00MjdkLTkxMWUtNmMwNjczYzczOTA5XkEyXkFqcGc@._V1_.jpg/200x300" alt="El derecho de nacer"></div>
-        <div class="telenovela"><img src="https://m.media-amazon.com/images/M/MV5BOTIyMDg0ODctZTQ2Yy00ZTI5LWEwYWQtYjVjYzUyYmNlNTdjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg/200x300" alt="Simplemente Maria"></div>
-        <div class="telenovela"><img src="https://m.media-amazon.com/images/M/MV5BOGRkNDVlNzQtM2Q1My00YTZiLWFmY2ItZDNjZjE4NTIwOWQ1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg/200x300" alt="Rosa Salvaje"></div>
-        <div class="telenovela"><img src="https://m.media-amazon.com/images/M/MV5BNGQyMjFlY2EtNmQ3MS00YmI0LTgyYTUtZDU2OWRjNmEyYjI1XkEyXkFqcGc@._V1_UY1200_CR87,0,630,1200_AL_.jpg/200x300" alt="Cuna de Lobos"></div>
+              <div class="categoria">
+        <h2>Clásicos favoritos</h2>
+        <div class="slider">
+            <div class="telenovela">
+                <img src="https://m.media-amazon.com/images/M/MV5BMjIyZTI1MzQtMmMxMS00MTkwLWFlNGMtMzQ2OThlZWNiM2YwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+                     alt="Corazón Salvaje" 
+                     onclick="mostrarTelenovela('Corazón Salvaje', 'https://m.media-amazon.com/images/M/MV5BMjIyZTI1MzQtMmMxMS00MTkwLWFlNGMtMzQ2OThlZWNiM2YwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', '1993', 'Sinopsis de Corazón Salvaje')">
+            </div>
+            <div class="telenovela">
+                <img src="https://m.media-amazon.com/images/M/MV5BNGQyMjFlY2EtNmQ3MS00YmI0LTgyYTUtZDU2OWRjNmEyYjI1XkEyXkFqcGc@._V1_UY1200_CR87,0,630,1200_AL_.jpg" 
+                     alt="Cuna de lobos" 
+                     onclick="mostrarTelenovela('Cuna de lobos', 'https://m.media-amazon.com/images/M/MV5BNGQyMjFlY2EtNmQ3MS00YmI0LTgyYTUtZDU2OWRjNmEyYjI1XkEyXkFqcGc@._V1_UY1200_CR87,0,630,1200_AL_.jpg', '1986', 'Sinopsis de María Mercedes')">
+            </div>
+            <div class="telenovela">
+                <img src="https://i.ibb.co/4RgwdYrw/MC1986.png" 
+                     alt="Monte Calvario" 
+                     onclick="mostrarTelenovela('Monte Calvario', 'https://i.ibb.co/4RgwdYrw/MC1986.png', '1986', 'Sinopsis de La Usurpadora')">
+                 </div>
+            <div class="telenovela">
+                <img src="https://m.media-amazon.com/images/M/MV5BOGRkNDVlNzQtM2Q1My00YTZiLWFmY2ItZDNjZjE4NTIwOWQ1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" 
+                     alt="Rosa Salvaje" 
+                     onclick="mostrarTelenovela('Rosa Salvaje', 'https://m.media-amazon.com/images/M/MV5BOGRkNDVlNzQtM2Q1My00YTZiLWFmY2ItZDNjZjE4NTIwOWQ1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', '1987', 'Sinopsis de La Usurpadora')">
+               </div>
+            <div class="telenovela">
+                <img src="https://i.ibb.co/1tzZnV6H/clariss.png" 
+                     alt="Clarisa" 
+                     onclick="mostrarTelenovela('Clarisa', 'https://i.ibb.co/1tzZnV6H/clariss.png', '1993', 'Sinopsis de La Usurpadora')">
+              
+            </div>
+        </div>
     </div>
 </div>
-
-<div class="categoria">
-    <h2>Internacionales</h2>
-    <div class="slider">
-        <div class="telenovela"><img src="https://via.placeholder.com/200x300" alt="Telenovela Internacional 1"></div>
-        <div class="telenovela"><img src="https://via.placeholder.com/200x300" alt="Telenovela Internacional 2"></div>
-        <div class="telenovela"><img src="https://via.placeholder.com/200x300" alt="Telenovela Internacional 3"></div>
-        <div class="telenovela"><img src="https://via.placeholder.com/200x300" alt="Telenovela Internacional 4"></div>
-    </div>
-</div>
-
+<!-- POPUP -->
 <div id="popup" class="popup">
     <div class="popup-content">
         <span class="close" onclick="cerrarPopup()">&times;</span>
-        <h2 id="popup-title">Telenovelas</h2>
-        <div class="popup-grid" id="popup-grid">
-            <!-- Aquí se agregarán las telenovelas dinámicamente -->
+        <h2 id="popup-title"></h2>
+        <img id="popup-image" src="" alt="">
+        <p id="popup-year"></p>
+        <p id="popup-synopsis"></p>
+
+        <div class="episodios-container">
+            <button id="toggle-episodios" onclick="toggleEpisodios()">Ver episodios ⌄</button>
+            <div id="lista-episodios"></div>
         </div>
     </div>
 </div>
