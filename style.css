@@ -1,4 +1,3 @@
-/* 🔹 Diseño General */
 body {
     background-color: #141414;
     color: white;
@@ -8,102 +7,10 @@ body {
     text-align: center;
 }
 
-/* 🔹 Encabezado */
 header {
     background-color: #d63384;
     color: white;
     padding: 20px;
-}
-
-/* 🔹 Barra de navegación */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    padding: 15px 20px;
-}
-
-.navbar h1 {
-    font-size: 24px;
-    color: #d63384;
-}
-
-/* 🔹 Categorías */
-.categoria {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 20px;
-}
-
-.categoria h2 {
-    font-size: 22px;
-    margin: 10px 0;
-    text-align: left;
-}
-
-/* 🔹 Carrusel de telenovelas */
-.slider {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-    padding-bottom: 10px;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-}
-
-.slider::-webkit-scrollbar {
-    display: none;
-}
-
-/* 🔹 Portadas de telenovelas */
-.telenovela {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-    transition: transform 0.3s;
-    position: relative;
-    cursor: pointer;
-}
-
-.telenovela img {
-    width: 200px;
-    height: 300px;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: 0.3s;
-}
-
-.telenovela:hover img {
-    transform: scale(1.05);
-}
-
-/* 🔹 Categorías flotantes */
-.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px;
-    text-align: center;
-    font-size: 16px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.telenovela:hover .overlay {
-    opacity: 1;
-}
-
-/* 🔹 Buscador */
-.buscador {
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 .buscador input {
@@ -115,24 +22,37 @@ header {
     font-size: 16px;
 }
 
-/* 🔹 Botón "Ver más" */
-.ver-mas {
-    text-align: right;
-    margin-top: 10px;
-    margin-right: 20px;
+.categoria {
+    padding-left: 20px;
+    text-align: left;
 }
 
-.ver-mas a {
-    font-size: 14px;
-    color: #d63384;
-    text-decoration: none;
+.slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
 }
 
-.ver-mas a:hover {
-    text-decoration: underline;
+.slider::-webkit-scrollbar {
+    display: none;
 }
 
-/* 🔹 Pop-up */
+.telenovela img {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.telenovela:hover img {
+    transform: scale(1.05);
+}
+
+/* POPUP */
 .popup {
     display: none;
     position: fixed;
@@ -145,7 +65,6 @@ header {
     align-items: center;
 }
 
-/* 🔹 Contenido del pop-up */
 .popup-content {
     background: black;
     padding: 20px;
@@ -156,7 +75,12 @@ header {
     position: relative;
 }
 
-/* 🔹 Botón de cerrar */
+.popup img {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+}
+
 .close {
     position: absolute;
     top: 10px;
@@ -171,25 +95,80 @@ header {
     color: red;
 }
 
-/* 🔹 Cuadrícula de telenovelas en el pop-up */
-.popup-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px;
+.episodios-container {
     margin-top: 20px;
 }
 
-.popup-grid img {
-    width: 100%;
+#lista-episodios {
+    display: none;
+    background: #222;
+    padding: 10px;
     border-radius: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 10px;
 }
 
-/* 🔹 Pie de página */
-footer {
-    background-color: #333;
+#lista-episodios button {
+    display: block;
+    background: none;
     color: white;
-    padding: 10px;
-    position: fixed;
+    border: none;
+    padding: 8px;
+    text-align: left;
     width: 100%;
-    bottom: 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#lista-episodios button:hover {
+    background: #444;
+}
+#toggle-episodios, #ver-mas, #lista-episodios button {
+    background: linear-gradient(135deg, #d63384, #ff007f);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(214, 51, 132, 0.4);
+}
+
+#toggle-episodios:hover, #ver-mas:hover, #lista-episodios button:hover {
+    background: linear-gradient(135deg, #ff007f, #ff00cc);
+    transform: scale(1.05);
+}
+header h1 {
+    font-size: 24px; /* Ajusta el tamaño según lo que prefieras */
+    margin: 0;
+}
+header {
+    background-color: #141414;
+    color: white;
+    padding: 5px; /* Reducido de 20px a 10px */
+}
+header {
+    text-align: left;
+    padding-left: 20px; /* Ajusta el espacio desde el borde izquierdo */
+}
+header h1 {
+    background: linear-gradient(to right, #f52997, #FC6880); /* Degradado más fuerte */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 28px; /* Ajusta según tu preferencia */
+    font-weight: bold;
+    display: inline-block; /* Asegura que el degradado cubra solo el texto */
+}
+.categorias {
+    display: flex;
+    flex-direction: column; /* Hace que cada categoría esté una debajo de otra */
+    gap: 30px; /* Espacio entre categorías */
+}
+.categoria {
+    width: 100%; /* Que ocupe todo el ancho disponible */
+    padding-left: 20px;
+    text-align: left;
 }
